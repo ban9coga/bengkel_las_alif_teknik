@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Logo } from "@/components/Logo";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -28,7 +29,7 @@ export function Header() {
     <header className="header">
       <div className="container header__inner">
         <a className="brand" href="#top" aria-label="Bengkel Las Alif Teknik">
-          <img src="/assets/logo.svg" alt="" width={36} height={36} />
+          <Logo size={36} />
           <span className="brand__text">
             <span className="brand__name" data-business-name>
               Alif Teknik
@@ -71,4 +72,3 @@ export function Header() {
     </header>
   );
 }
-

@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   title: "Bengkel Las Alif Teknik | Jasa Las Padang",
   description:
     "Bengkel Las Alif Teknik di Kota Padang — pagar, kanopi, teralis, railing, custom besi. Konsultasi cepat via WhatsApp.",
+  icons: {
+    icon: [
+      { url: "/assets/logo.png" },
+      { url: "/assets/logo.svg", type: "image/svg+xml" },
+    ],
+  },
 };
 
 export const viewport = {

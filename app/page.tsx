@@ -1,6 +1,7 @@
 import Script from "next/script";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { Header } from "@/components/Header";
+import { Logo } from "@/components/Logo";
 import { buildMailto, buildMapsLink, buildTelLink, buildWhatsAppLink } from "@/lib/links";
 import { site } from "@/lib/site";
 
@@ -322,7 +323,7 @@ export default function Page() {
       <footer className="footer">
         <div className="container footer__inner">
           <div className="footer__left">
-            <img src="/assets/logo.svg" alt="" width={28} height={28} />
+            <Logo size={28} />
             <span>
               © {new Date().getFullYear()} {site.businessName}. All rights reserved.
             </span>
@@ -360,4 +361,3 @@ export default function Page() {
     </>
   );
 }
-

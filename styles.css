@@ -1,14 +1,14 @@
 :root {
-  --bg: #070b14;
+  --bg: #05060a;
   --text: rgba(255, 255, 255, 0.92);
   --muted: rgba(255, 255, 255, 0.7);
   --muted2: rgba(255, 255, 255, 0.55);
-  --border: rgba(255, 255, 255, 0.12);
+  --border: rgba(255, 255, 255, 0.13);
   --shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
   --radius: 18px;
   --radius-sm: 14px;
-  --accent: #57d0ff;
-  --accent2: #9b5cff;
+  --accent: #d4af37;
+  --accent2: #f2d27a;
   --good: #28d17c;
   --max: 1100px;
 }
@@ -38,12 +38,12 @@ body {
   background:
     radial-gradient(
       1200px 700px at 20% -10%,
-      rgba(87, 208, 255, 0.18),
+      rgba(212, 175, 55, 0.18),
       transparent 60%
     ),
     radial-gradient(
       900px 600px at 90% 10%,
-      rgba(155, 92, 255, 0.16),
+      rgba(242, 210, 122, 0.14),
       transparent 60%
     ),
     var(--bg);
@@ -108,7 +108,7 @@ code {
   background: linear-gradient(
     90deg,
     var(--accent),
-    #c1f2ff 35%,
+    rgba(255, 255, 255, 0.92) 35%,
     var(--accent2) 85%
   );
   -webkit-background-clip: text;
@@ -170,11 +170,11 @@ code {
   color: #fff;
 }
 .nav__cta {
-  background: rgba(87, 208, 255, 0.16);
-  border: 1px solid rgba(87, 208, 255, 0.28);
+  background: rgba(212, 175, 55, 0.14);
+  border: 1px solid rgba(212, 175, 55, 0.28);
 }
 .nav__cta:hover {
-  background: rgba(87, 208, 255, 0.24);
+  background: rgba(212, 175, 55, 0.2);
 }
 
 .nav-toggle {
@@ -256,16 +256,16 @@ code {
 .btn--primary {
   background: linear-gradient(
     90deg,
-    rgba(87, 208, 255, 0.22),
-    rgba(155, 92, 255, 0.22)
+    rgba(212, 175, 55, 0.26),
+    rgba(242, 210, 122, 0.18)
   );
   border-color: rgba(255, 255, 255, 0.16);
 }
 .btn--primary:hover {
   background: linear-gradient(
     90deg,
-    rgba(87, 208, 255, 0.28),
-    rgba(155, 92, 255, 0.28)
+    rgba(212, 175, 55, 0.32),
+    rgba(242, 210, 122, 0.22)
   );
 }
 .btn--ghost {
@@ -598,12 +598,12 @@ code {
   background:
     radial-gradient(
       800px 300px at 20% 0%,
-      rgba(87, 208, 255, 0.22),
+      rgba(212, 175, 55, 0.22),
       transparent 60%
     ),
     radial-gradient(
       800px 300px at 90% 10%,
-      rgba(155, 92, 255, 0.2),
+      rgba(242, 210, 122, 0.16),
       transparent 60%
     ),
     rgba(255, 255, 255, 0.03);
@@ -752,4 +752,3 @@ code {
     transition: none !important;
   }
 }
-
