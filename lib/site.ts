@@ -3,11 +3,11 @@ export const site = {
   tagline: "Jasa las rapi & kuat — pagar, kanopi, teralis, railing, dan custom besi.",
   city: "Kota Padang",
 
-  whatsappNumber: "62812XXXXXXX",
-  phoneNumber: "62812XXXXXXX",
+  whatsappNumber: "6285271722916",
+  phoneNumber: "6285271722916",
   email: "alifteknik@example.com",
 
-  instagramProfile: "https://instagram.com/USERNAME",
+  instagramProfile: "https://instagram.com/alif.teknik",
   instagramPosts: [] as string[],
 
   address: "Jalan Tampat Pincuran 7 No 16, Kalumbuk, Kuranji, Kota Padang",
