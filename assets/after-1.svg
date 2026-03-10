@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10293a"/>
+      <stop offset="0.55" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#1f1233"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <g opacity="0.22" fill="#57D0FF">
+    <circle cx="240" cy="640" r="150"/>
+  </g>
+  <g opacity="0.18" fill="#9B5CFF">
+    <circle cx="1020" cy="170" r="140"/>
+  </g>
+  <rect x="80" y="120" width="1040" height="560" rx="28" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.16)"/>
+  <text x="120" y="210" fill="rgba(255,255,255,0.92)" font-family="system-ui,Segoe UI,Arial" font-size="54" font-weight="800">AFTER</text>
+  <text x="120" y="270" fill="rgba(255,255,255,0.7)" font-family="system-ui,Segoe UI,Arial" font-size="22">Ganti foto ini dengan hasil akhir proyek 1</text>
+  <text x="120" y="640" fill="rgba(255,255,255,0.62)" font-family="system-ui,Segoe UI,Arial" font-size="18">Finishing rapi • Kuat • Presisi</text>
+</svg>
+
