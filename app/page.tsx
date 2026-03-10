@@ -1,5 +1,6 @@
 import Script from "next/script";
 import { BeforeAfter } from "@/components/BeforeAfter";
+import { Faq } from "@/components/Faq";
 import { Header } from "@/components/Header";
 import { Logo } from "@/components/Logo";
 import { buildMailto, buildMapsLink, buildTelLink, buildWhatsAppLink } from "@/lib/links";
@@ -33,6 +34,11 @@ export default function Page() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: site.businessName,
+            url: process.env.NEXT_PUBLIC_SITE_URL || undefined,
+            image: "/assets/logo.png",
+            telephone: site.phoneNumber ? `+${String(site.phoneNumber).replace(/[^\d]/g, "")}` : undefined,
+            email: site.email || undefined,
+            sameAs: [site.instagramProfile].filter(Boolean),
             address: {
               "@type": "PostalAddress",
               streetAddress: "Jalan Tampat Pincuran 7 No 16",
@@ -235,7 +241,7 @@ export default function Page() {
                     className="shot"
                     href={href || "#"}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noreferrer noopener"
                   >
                     <img src={g.img} alt={g.cap} width={800} height={600} loading="lazy" />
                     <span className="shot__cap">{g.cap}</span>
@@ -249,11 +255,41 @@ export default function Page() {
                 className="btn btn--ghost"
                 href={site.instagramProfile || "#"}
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer noopener"
               >
                 Buka Instagram
               </a>
             </div>
+          </div>
+        </section>
+
+        <section className="section" id="faq">
+          <div className="container">
+            <div className="section__head">
+              <h2>FAQ</h2>
+              <p className="muted">Pertanyaan yang sering ditanya sebelum order.</p>
+            </div>
+
+            <Faq
+              items={[
+                {
+                  q: "Bisa custom ukuran dan model?",
+                  a: "Bisa. Kirim foto referensi + ukuran (panjang/tinggi) lewat WhatsApp, nanti kami bantu rekomendasi model dan material.",
+                },
+                {
+                  q: "Layanannya apa saja?",
+                  a: "Pagar, kanopi, teralis, railing tangga, pintu besi, serta perbaikan/modifikasi dan kebutuhan custom besi lainnya.",
+                },
+                {
+                  q: "Area pengerjaan di mana?",
+                  a: "Kami berlokasi di Kalumbuk, Kuranji, Kota Padang. Untuk area pemasangan/kunjungan, chat WhatsApp untuk konfirmasi.",
+                },
+                {
+                  q: "Cara cepat dapat estimasi?",
+                  a: "Kirim foto lokasi + ukuran + kebutuhan material/finishing. Semakin lengkap informasinya, estimasi bisa lebih cepat.",
+                },
+              ]}
+            />
           </div>
         </section>
 
@@ -269,7 +305,7 @@ export default function Page() {
                 <h3>Alamat</h3>
                 <p className="muted">{site.address}</p>
                 <div className="location__actions">
-                  <a className="btn btn--primary" href={mapsHref} target="_blank" rel="noreferrer">
+                  <a className="btn btn--primary" href={mapsHref} target="_blank" rel="noreferrer noopener">
                     Buka Google Maps
                   </a>
                   <a className="btn btn--ghost" href={whatsappHref}>
@@ -329,10 +365,10 @@ export default function Page() {
             </span>
           </div>
           <div className="footer__right">
-            <a href={site.instagramProfile || "#"} target="_blank" rel="noreferrer">
+            <a href={site.instagramProfile || "#"} target="_blank" rel="noreferrer noopener">
               Instagram
             </a>
-            <a href={mapsHref} target="_blank" rel="noreferrer">
+            <a href={mapsHref} target="_blank" rel="noreferrer noopener">
               Maps
             </a>
           </div>
