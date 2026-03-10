@@ -3,8 +3,8 @@ export const site = {
   tagline: "Jasa las rapi & kuat — pagar, kanopi, teralis, railing, dan custom besi.",
   city: "Kota Padang",
 
-  whatsappNumber: "6285271722916",
-  phoneNumber: "6285271722916",
+  whatsappNumber: "6285271722918",
+  phoneNumber: "6285271722918",
   email: "alifteknik@example.com",
 
   instagramProfile: "https://instagram.com/alif.teknik",
