@@ -17,9 +17,8 @@ export function Logo({ size, alt = "", className }: Props) {
       alt={alt}
       width={size}
       height={size}
-      className={className}
-      onError={() => setSrc("/assets/logo.svg")}
+      className={["logo-img", className].filter(Boolean).join(" ")}
+      onError={() => setSrc((prev) => (prev.endsWith("logo.svg") ? prev : "/assets/logo.svg"))}
     />
   );
 }
-
