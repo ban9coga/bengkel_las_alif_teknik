@@ -1,2 +1,10 @@
-/* Tempat override CSS global kalau dibutuhkan. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth font rendering */
+html,
+body {
+  height: 100%;
+}
 
