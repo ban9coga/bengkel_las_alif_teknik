@@ -2,7 +2,7 @@ node_modules
 .next
 .vercel
 dist
+.npm-cache
 
 .DS_Store
 *.log
-
