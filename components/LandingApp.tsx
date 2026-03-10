@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
+import Script from "next/script";
 import {
   Calculator,
   CheckCircle2,
@@ -510,6 +511,11 @@ export function LandingApp() {
       {activeTab === "portofolio" && (
         <section className="min-h-[70vh] bg-slate-900 py-20 text-white">
           <div className="mx-auto max-w-7xl px-4 text-center">
+            <Script
+              src="https://elfsightcdn.com/platform.js"
+              strategy="afterInteractive"
+            />
+
             <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-pink-500/20 px-4 py-2 text-pink-400">
               <Instagram size={18} />
               <span className="text-sm font-bold">
@@ -519,26 +525,24 @@ export function LandingApp() {
             <h1 className="mb-12 text-4xl font-black italic">Hasil Kerja Kami</h1>
 
             <div className="rounded-3xl border border-slate-700 bg-slate-800 p-4 md:p-8">
-              <div className="flex h-96 items-center justify-center rounded-2xl border-2 border-dashed border-slate-600 bg-slate-700/30">
-                <div className="text-center">
-                  <Instagram size={48} className="mx-auto mb-4 text-slate-500" />
-                  <p className="font-medium text-slate-400">
-                    Widget Instagram Akan Muncul Di Sini
-                  </p>
-                  <p className="mx-auto mt-2 max-w-xs text-xs text-slate-500">
-                    Menggunakan Elfsight/LightWidget untuk sinkronisasi otomatis
-                    postingan portofolio terbaru.
-                  </p>
-                  <a
-                    className="mt-6 inline-block rounded-lg bg-white px-6 py-2 font-bold text-slate-900"
-                    href={site.instagramProfile}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Lihat di Instagram Langsung
-                  </a>
-                </div>
+              <div className="rounded-2xl bg-slate-700/30 p-2">
+                <div
+                  className="elfsight-app-afd07eb2-c0b1-484d-9d02-c607498c3556"
+                  data-elfsight-app-lazy
+                />
               </div>
+              <p className="mx-auto mt-4 max-w-2xl text-xs text-slate-400">
+                Jika feed tidak muncul, buka langsung Instagram:{" "}
+                <a
+                  className="font-bold text-yellow-400 hover:text-yellow-300"
+                  href={site.instagramProfile}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  {igHandle}
+                </a>
+                .
+              </p>
 
               <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
                 {["#kanopipadang", "#pagarminimalis", "#laslistrik", "#teralisjendela"].map(
@@ -656,4 +660,3 @@ export function LandingApp() {
     </div>
   );
 }
-
