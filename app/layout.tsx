@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Bengkel Las Alif Teknik | Jasa Las Padang",
   description:
     "Bengkel Las Alif Teknik di Kota Padang — pagar, kanopi, teralis, railing, custom besi. Konsultasi cepat via WhatsApp.",
+};
+
+export const viewport = {
   themeColor: "#0b1220",
 };
 
