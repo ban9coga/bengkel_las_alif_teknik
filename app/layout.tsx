@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
 import "../styles.css";
 import "./globals.css";
-
-function getSiteUrl() {
-  const explicit = process.env.NEXT_PUBLIC_SITE_URL;
-  if (explicit) return explicit;
-  const vercel = process.env.VERCEL_URL;
-  if (vercel) return `https://${vercel}`;
-  return "http://localhost:3000";
-}
+import { getBaseUrl } from "@/lib/baseUrl";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(getSiteUrl()),
+  metadataBase: new URL(getBaseUrl()),
   title: {
     default: "Bengkel Las Alif Teknik | Jasa Las Padang",
     template: "%s | Bengkel Las Alif Teknik",
@@ -60,4 +53,3 @@ export default function RootLayout({
     </html>
   );
 }
-

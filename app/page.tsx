@@ -3,6 +3,7 @@ import { BeforeAfter } from "@/components/BeforeAfter";
 import { Faq } from "@/components/Faq";
 import { Header } from "@/components/Header";
 import { Logo } from "@/components/Logo";
+import { getBaseUrl } from "@/lib/baseUrl";
 import { buildMailto, buildMapsLink, buildTelLink, buildWhatsAppLink } from "@/lib/links";
 import { site } from "@/lib/site";
 
@@ -14,6 +15,7 @@ export default function Page() {
   const phoneHref = buildTelLink(site.phoneNumber);
   const emailHref = buildMailto(site.email, "Konsultasi Bengkel Las");
   const mapsHref = buildMapsLink(site.mapsQuery || site.address);
+  const baseUrl = getBaseUrl();
 
   const gallery = [
     { img: "/assets/gallery-1.svg", cap: "Pagar minimalis" },
@@ -34,11 +36,18 @@ export default function Page() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: site.businessName,
-            url: process.env.NEXT_PUBLIC_SITE_URL || undefined,
-            image: "/assets/logo.png",
-            telephone: site.phoneNumber ? `+${String(site.phoneNumber).replace(/[^\d]/g, "")}` : undefined,
+            url: `${baseUrl}/`,
+            image: `${baseUrl}/assets/logo.png`,
+            telephone: site.phoneNumber
+              ? `+${String(site.phoneNumber).replace(/[^\d]/g, "")}`
+              : undefined,
             email: site.email || undefined,
             sameAs: [site.instagramProfile].filter(Boolean),
+            priceRange: site.priceRange || undefined,
+            areaServed: (site.serviceArea || []).length
+              ? site.serviceArea.map((name) => ({ "@type": "Place", name }))
+              : undefined,
+            openingHours: site.openingHoursText || undefined,
             address: {
               "@type": "PostalAddress",
               streetAddress: "Jalan Tampat Pincuran 7 No 16",
@@ -62,8 +71,8 @@ export default function Page() {
             <div className="hero__copy">
               <p className="eyebrow">Kota Padang • Kalumbuk, Kuranji</p>
               <h1>
-                Jasa las rapi & kuat untuk{" "}
-                <span className="gradient-text">kebutuhan rumah & usaha</span>
+                Bengkel Las {site.city}:{" "}
+                <span className="gradient-text">rapi, kuat, dan bisa custom</span>
               </h1>
               <p className="lead">{site.tagline}</p>
 
